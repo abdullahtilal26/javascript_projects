@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --successColor: greenyellow;
+  --failureColor: lightcoral;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+}
+body {
+  background-color: hsla(60, 0%, 50%, 0.3);
+  font-family: "Open Sans", sans-serif;
+  /*-------------this below code is used to align items--------------*/
+  display: flex;
+  align-items: center; /*align items fo vertical alignments if an elemnt has some hieght assigned to it*/
+  min-height: 100vh; /*vh viewport height (0-100)*/
+  justify-content: center;
+}
+.container {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  width: 450px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form {
+  padding: 30px 40px;
+  position: relative; /*we are doingthis relative becasue we want small tag to be absolute and we can only do so if its parent is relative*/
+}
+.form-control {
+  margin-bottom: 20px;
+}
+.form-control label {
+  color: grey;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+/* .form-control input:focus {
+  outline: 0;
+  border-color: aqua;
+} */
+
+.success input {
+  border-color: var(--successColor);
+}
+.failure input {
+  border-color: var(--failureColor);
+}
+.form-control small {
+  color: var(--failureColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.failure small {
+  visibility: visible;
+}
+.form button {
+  cursor: pointer;
+  background-color: rgb(76, 115, 233);
+  border: 2px solid rgb(76, 115, 233);
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  text-decoration: none;
+}
+a button {
+  background-color: grey;
+  border: 2px solid grey;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  text-decoration: none;
+}
