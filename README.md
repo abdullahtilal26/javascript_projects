@@ -1,2 +1,2 @@
-# project1
+# javascript_projects
  
