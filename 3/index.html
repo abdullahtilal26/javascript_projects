@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./progress.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Video Player</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+    <video src="./videos/video1.mp4" id="video" class="video" poster="./videos/cover.jpg"></video>
+    <!-- add "control keyword to add default html5 controls in video POSTER->COVER IMAGE OF VIDEO (since we want to add video buttons by ourself we will not add control keyword)" -->
+    
+    <!-- custom video player controlls -->
+    <div class="controls">
+        <button class="btn" id="play"><i class="fa fa-play fa-2x"></i></button>
+        <button class="btn" id="stop"><i class="fa fa-stop fa-2x"></i></button>
+        <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
+        <!-- step->jumps it takes while moving forward value->initial value -->
+        <span class="time" id="time">00:00</span>
+    </div>
+    <div class="control2">
+        <i class="fas fa-volume btn2" id="speaker"></i>
+        <input type="range" id="volume" class="volume btn2" min="0" max="1" step="0.01" value="100">
+        <span id="volumevalue">100</span>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
